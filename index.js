@@ -71,7 +71,7 @@ app.post("/", express.json(), async function (req, res) {
       : requestBody.message.text;
     console.log("hola se recibio un mensaje");
     var responseFromPoe = await sendMessageToPoe(messageForPoe, clearContext);
-    //console.log(responseFromPoe);
+    console.log(responseFromPoe);
     /* res.json({ msg: responseFromPoe }); */
     var textocontablasarregladas = fixMarkdownTableInText(responseFromPoe);
     var encodedMessage = extractAndEncodeHTMLCode(textocontablasarregladas);
