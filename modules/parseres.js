@@ -1,7 +1,7 @@
 const he = require("he");
 function extractAndEncodeHTMLCode(text) {
   //remover lo que estan entre ``` y ```
-  text = text.replace(/```\n?.+[^ ]\n/g, "```");
+  text = text.replace(/```\n?\w+\n/g, "```\n");
   //console.log(text);
   var regex = /```(.*\n)+```/g;
   var regexMatches = text.match(regex);
